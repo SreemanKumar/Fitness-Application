@@ -1,0 +1,34 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+  <main class="table" id="healthmetrics_table">
+    <section class="table__header">
+      <h1>Health Metrics of All Users</h1>
+    </section>
+
+    <section class="table__body">
+      <table>
+        <thead>
+          <tr>
+            <th>User ID <span class="icon-arrow">&UpArrow;</span></th>
+            <th>Date <span class="icon-arrow">&UpArrow;</span></th>
+            <th>Weight (kg) <span class="icon-arrow">&UpArrow;</span></th>
+            <th>Height (cm) <span class="icon-arrow">&UpArrow;</span></th>
+            <th>BMI <span class="icon-arrow">&UpArrow;</span></th>
+            <th>Notes <span class="icon-arrow">&UpArrow;</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let metric of healthMetricsList">
+            <td>{{metric.userId}}</td>
+            <td>{{ metric.date }}</td>
+            <td>{{ metric.weight }}</td>
+            <td>{{ metric.height }}</td>
+            <td>{{ metric.bmi | number: '1.1-1' }}</td>
+            <td>{{ metric.notes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>

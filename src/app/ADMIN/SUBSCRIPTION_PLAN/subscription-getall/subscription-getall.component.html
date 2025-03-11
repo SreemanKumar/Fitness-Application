@@ -1,0 +1,33 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+    <main class="table" id="subscriptions_table">
+        <section class="table__header">
+            <h1 class="heading">All Subscriptions</h1>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subscription ID <span class="icon-arrow">&UpArrow;</span></th>
+                        <th>Type <span class="icon-arrow">&UpArrow;</span></th>
+                        <th>Start Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th>End Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th>Price <span class="icon-arrow">&UpArrow;</span></th>
+                        <th>User ID <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let subscription of subscriptions">
+                        <td>{{ subscription.subscriptionId }}</td>
+                        <td>{{ subscription.subscriptionType }}</td>
+                        <td>{{ subscription.startDate }}</td>
+                        <td>{{ subscription.endDate }}</td>
+                        <td> <strong>₹{{ subscription.price }}</strong> </td>
+                        <td>{{ subscription.userId }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>

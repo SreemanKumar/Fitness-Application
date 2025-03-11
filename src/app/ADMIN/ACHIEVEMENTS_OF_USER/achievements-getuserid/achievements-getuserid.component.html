@@ -1,0 +1,39 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+    <main class="table" id="users_table">
+        <section class="table" id="users_table">
+            <section class="table__header">
+                <h2>Achievements by User ID</h2>
+
+                <div class="input-group">
+                    <input type="number" [(ngModel)]="userId" placeholder="Enter User ID" />
+                    <button (click)="fetchAchievements()">Fetch Achievements</button>
+                </div>
+
+            </section>
+
+            <section class="table__body">
+                <table *ngIf="achievements.length > 0">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let achievement of achievements">
+                            <td>{{ achievement.title }}</td>
+                            <td>{{ achievement.description }}</td>
+                            <td>{{ achievement.dateAchieved }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <p *ngIf="achievements.length === 0">No achievements found for this user.</p>
+
+        </section>
+    </main>
+</body>

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@media print {
+
+    .table,
+    .table__body {
+        overflow: visible;
+        height: auto !important;
+        width: auto !important;
+    }
+}
+
+body {
+    min-height: 100vh;
+    /* background: #323946; */
+    /* background-image: url('https://images.pexels.com/photos/700392/pexels-photo-700392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+    background-image: url('https://img.freepik.com/free-photo/front-view-man-tank-top-holding-weights-with-copy-space_23-2148700670.jpg?t=st=1739362473~exp=1739366073~hmac=951a837f3c6b29cb86c1a3cc6532e5331bb70e89577e0476216e97468c811716&w=1060');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+main.table {
+    width: 82vw;
+    min-height: 10vh;
+    /* Minimum height to prevent excessive empty space */
+    max-height: 90vh;
+    /* Ensures table does not exceed screen height */
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.table__header {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.table__header .input-group {
+    width: 35%;
+    height: 100%;
+    background-color: #fff5;
+    padding: 0 .8rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .2s;
+}
+
+.table__header .input-group:hover {
+    width: 45%;
+    background-color: #fff8;
+    box-shadow: 0 .1rem .4rem #0002;
+}
+
+.table__header .input-group img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.table__header .input-group input {
+    width: 100%;
+    padding: 0 .5rem 0 .3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.table__body {
+    width: 95%;
+    background-color: #fffb;
+    margin: 0.8rem auto;
+    border-radius: 0.6rem;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+/* Ensure table layout is properly structured */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* Ensures proper column spacing */
+}
+
+thead th {
+    background-color: #d5d1defe;
+    text-align: left;
+    padding: 1rem;
+    text-transform: capitalize;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Ensure each column takes equal space */
+thead th,
+tbody td {
+    width: auto;
+    padding: 1rem;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/* Ensure data aligns correctly */
+tbody tr {
+    display: table-row;
+    /* Ensures each row maintains column structure */
+    transition: 0.5s ease-in-out, background-color 0s;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #fff6 !important;
+}
+
+/* Scrollbar styles */
+.table__body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+/* Status styles */
+.status {
+    padding: 0.4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.status.delivered {
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+.status.cancelled {
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+.status.pending {
+    background-color: #ebc474;
+}
+
+.status.shipped {
+    background-color: #6fcaea;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+    td:not(:first-of-type) {
+        min-width: 12.1rem;
+    }
+}

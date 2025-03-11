@@ -1,0 +1,26 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Health <span>Metrics</span></h2>
+
+    <form (submit)="submitHealthMetrics()">
+        <div class="input-box">
+            <input type="number" [(ngModel)]="healthMetrics.userId"placeholder="User ID"  name="User ID" required />
+        </div>
+
+        <div class="input-box">
+
+            <input type="date" [(ngModel)]="healthMetrics.date" name="date" required />
+            <input type="number" [(ngModel)]="healthMetrics.weight" name="weight" placeholder="Weight" required />
+        </div>
+
+        <div class="input-box">
+            <input type="number" [(ngModel)]="healthMetrics.height" name="height" placeholder="Height" required />
+            <!-- <input type="number" [(ngModel)]="healthMetrics.bmi" name="bmi" placeholder="BMI (Auto-Calculated)"
+                readonly /> -->
+        </div>
+
+        <textarea [(ngModel)]="healthMetrics.notes" name="notes" rows="4" placeholder="Your Notes"></textarea>
+        <input type="submit" value="Submit" class="btn" />
+    </form>
+</section>

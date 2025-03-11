@@ -1,0 +1,41 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+  <main class="table" id="users_table">
+    <section class="table__header">
+      <h1 class="heading">All Users</h1>
+      <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+      <!-- <div class="input-group"></div> -->
+    </section>
+
+    <section class="table__body">
+      <table>
+        <thead>
+          <tr>
+            <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+            <th> Email <span class="icon-arrow">&UpArrow;</span></th>
+            <th> Age <span class="icon-arrow">&UpArrow;</span></th>
+            <th> Gender <span class="icon-arrow">&UpArrow;</span></th>
+            <th> Weight <span class="icon-arrow">&UpArrow;</span></th>
+            <th> Height <span class="icon-arrow">&UpArrow;</span></th>
+            <th> Goal <span class="icon-arrow">&UpArrow;</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <!-- <td> {{ user.id }} </td> -->
+            <td> {{ user.name }} </td>
+            <td> {{ user.email }} </td>
+            <td> {{ user.age }} </td>
+            <td> {{ user.gender }} </td>
+            <td> <strong> {{ user.weight }} </strong></td>
+            <td> <strong> {{ user.height }} </strong></td>
+            <td>
+              <p>{{ user.goal }}</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>

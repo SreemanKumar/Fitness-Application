@@ -1,0 +1,38 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+    <main class="table" id="users_table">
+        <section class="table" id="users_table">
+            <section class="table__header">
+                <h1>Activities for User</h1>
+                <div class="input-group">
+                    <input type="number" [(ngModel)]="userId" placeholder="Enter User ID" />
+                    <button (click)="fetchActivities()">Fetch Activities</button>
+                </div>
+            </section>
+
+            <section class="table__body">
+                <table *ngIf="activities.length > 0">
+                    <thead>
+                        <tr>
+                            <th>Activity Name</th>
+                            <th>Duration (minutes)</th>
+                            <th>Calories Burned</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let activity of activities">
+                            <td>{{ activity.activityType }}</td>
+                            <td>{{ activity.durationInMinutes }}</td>
+                            <td>{{ activity.caloriesBurned }}</td>
+                            <td>{{activity.date}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <p *ngIf="activities.length === 0">No activities found for this user.</p>
+
+        </section>
+    </main>
+</body>

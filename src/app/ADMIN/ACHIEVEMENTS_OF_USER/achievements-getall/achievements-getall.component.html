@@ -1,0 +1,33 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+  <main class="table" id="users_table">
+    <section class="table__header" id="achievements-list">
+      <h1 class="heading">Achievements of All Users</h1>
+      <!-- <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p> -->
+      <!-- <div class="input-group"></div> -->
+    </section>
+
+
+    <section class="table__body">
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Date Achieved</th>
+            <th>User ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let achievement of achievements">
+            <td>{{ achievement.title }}</td>
+            <td>{{ achievement.description }}</td>
+            <td>{{ achievement.dateAchieved }}</td>
+            <td>{{ achievement.userId }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>

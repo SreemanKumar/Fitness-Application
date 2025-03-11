@@ -1,0 +1,14 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+<section class="contact" id="contact">
+    <h2 class="heading">Delete A User <span>By ID</span></h2>
+
+    <form [formGroup]="deleteForm" (ngSubmit)="onDelete()">
+        <div class="input-box">
+            <input type="number" formControlName="userId" placeholder="Enter User ID" required>
+        </div>
+
+        <input type="submit" value="Delete User" class="btn">
+    </form>
+
+    <p *ngIf="message" class="message">{{ message }}</p>
+</section>

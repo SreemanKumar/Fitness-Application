@@ -1,0 +1,65 @@
+<!-- src/app/components/dietplan-list/dietplan-list.component.html -->
+<!-- <app-navbar-withlogout></app-navbar-withlogout>
+<section class="dietplan-list" id="dietplan-list">
+    <h2 class="heading">
+        Diet <span></span>
+    </h2>
+
+    <div *ngIf="dietPlans.length > 0; else noData">
+        <div *ngFor="let plan of dietPlans" class="dietplan-item">
+            <h3>Plan ID: {{ plan.planId }}</h3>
+            <p><strong>Start Date:</strong> {{ plan.startDate }}</p>
+            <p><strong>End Date:</strong> {{ plan.endDate }}</p>
+            <p><strong>Meal Plan:</strong> {{ plan.mealPlan }}</p>
+            <p *ngIf="plan.notes"><strong>Notes:</strong> {{ plan.notes }}</p>
+            <p><strong>User ID:</strong> {{ plan.userId }}</p>
+        </div>
+    </div>
+
+    <ng-template #noData>
+        <p>No diet plans available.</p>
+    </ng-template>
+</section> -->
+
+<!-- <app-navbar-withlogout></app-navbar-withlogout> -->
+
+<body>
+    <main class="table" id="dietplan_table">
+        <section class="table__header" id="dietplan-list">
+            <h1 class="heading">
+                Diet <span>Plans</span>
+            </h1>
+        </section>
+
+        <section class="table__body">
+            <div *ngIf="dietPlans.length > 0; else noData">
+                <table class="dietplan-table">
+                    <thead>
+                        <tr>
+                            <th>Plan ID</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Meal Plan</th>
+                            <th>Notes</th>
+                            <th>User ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let plan of dietPlans">
+                            <td>{{ plan.planId }}</td>
+                            <td>{{ plan.startDate }}</td>
+                            <td>{{ plan.endDate }}</td>
+                            <td>{{ plan.mealPlan }}</td>
+                            <td>{{ plan.notes ? plan.notes : 'N/A' }}</td>
+                            <td>{{ plan.userId }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ng-template #noData>
+                <p>No diet plans available.</p>
+            </ng-template>
+        </section>
+    </main>
+</body>

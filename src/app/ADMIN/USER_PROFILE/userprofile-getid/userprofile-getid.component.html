@@ -1,0 +1,90 @@
+<!-- <app-navbar-withlogout></app-navbar-withlogout> -->
+
+<!-- <section class="contact" id="contact">
+    <h2 class="heading">Get User <span>By ID</span></h2>
+
+    <div class="input-box">
+        <input type="number" [(ngModel)]="userId" placeholder="Enter User ID">
+        <button (click)="getUserById()" class="btn">Search</button>
+    </div>
+
+    <div *ngIf="userData">
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Weight</th>
+                    <th>Height</th>
+                    <th>Goal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ userData.id }}</td>
+                    <td>{{ userData.name }}</td>
+                    <td>{{ userData.email }}</td>
+                    <td>{{ userData.age }}</td>
+                    <td>{{ userData.gender }}</td>
+                    <td>{{ userData.weight }}</td>
+                    <td>{{ userData.height }}</td>
+                    <td>{{ userData.goal }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</section> -->
+
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+    <main class="table" id="users_table">
+        <section class="table" id="users_table">
+            <section class="table__header">
+                <h1>Get User <span>By ID</span></h1>
+                <div class="input-group">
+                    <input type="number" [(ngModel)]="userId" placeholder="Enter User ID">
+                    <button (click)="getUserById()" class="btn">Search</button>
+                </div>
+            </section>
+
+            <section class="table__body">
+                <div *ngIf="userData">
+                    <table>
+                        <thead>
+                            <tr>
+                                <!-- <th>User ID <span class="icon-arrow">&UpArrow;</span></th> -->
+                                <th>Name <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>Email <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>Age <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>Gender <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>Weight <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>Height <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>Goal <span class="icon-arrow">&UpArrow;</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- <td>{{ userData.id }}</td> -->
+                                <td>{{ userData.name }}</td>
+                                <td>{{ userData.email }}</td>
+                                <td>{{ userData.age }}</td>
+                                <td>{{ userData.gender }}</td>
+                                <td>{{ userData.weight }}</td>
+                                <td>{{ userData.height }}</td>
+                                <td>{{ userData.goal }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+        </section>
+    </main>
+</body>

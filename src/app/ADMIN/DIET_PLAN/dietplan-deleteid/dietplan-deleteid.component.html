@@ -1,0 +1,21 @@
+<!-- dietplandeleteid.component.html -->
+ <app-navbar-withlogout></app-navbar-withlogout>
+
+<section class="contact" id="contact">
+  <h2 class="heading">
+    Delete <span>Diet Plan</span>
+  </h2>
+
+  <form (ngSubmit)="deleteDietPlan()">
+    <div class="input-box">
+      <input
+        type="number"
+        [(ngModel)]="planId"
+        name="planId"
+        placeholder="Diet Plan ID"
+        required
+      />
+    </div>
+    <input type="submit" value="Delete" class="btn" />
+  </form>
+</section>

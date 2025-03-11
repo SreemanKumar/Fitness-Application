@@ -1,0 +1,53 @@
+<!-- achievement.component.html -->
+<app-navbar-withlogout></app-navbar-withlogout>
+<section class="contact" id="contact">
+  <h2 class="heading">
+    Achievements of <span>User</span>
+  </h2>
+
+  <form [formGroup]="achievementForm" (ngSubmit)="onSubmit()">
+    <div class="input-box">
+      <input
+        type="text"
+        formControlName="title"
+        placeholder="Title"
+        [class.invalid]="
+          achievementForm.get('title')?.invalid &&
+          achievementForm.get('title')?.touched
+        "
+      />
+      <textarea
+        formControlName="description"
+        rows="4"
+        placeholder="Description"
+        [class.invalid]="
+          achievementForm.get('description')?.invalid &&
+          achievementForm.get('description')?.touched
+        "
+      ></textarea>
+    </div>
+
+    <div class="input-box">
+      <input
+        type="date"
+        formControlName="dateAchieved"
+        placeholder="Date Achieved"
+        [class.invalid]="
+          achievementForm.get('dateAchieved')?.invalid &&
+          achievementForm.get('dateAchieved')?.touched
+        "
+      />
+      <input
+        type="number"
+        formControlName="userId"
+        placeholder="User ID"
+        [class.invalid]="
+          achievementForm.get('userId')?.invalid &&
+          achievementForm.get('userId')?.touched
+        "
+      />
+    </div>
+
+    <input type="submit" value="Submit" class="btn" [disabled]="achievementForm.invalid" />
+  </form>
+</section>

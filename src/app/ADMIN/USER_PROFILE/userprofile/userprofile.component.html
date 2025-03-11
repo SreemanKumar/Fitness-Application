@@ -1,0 +1,24 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+<section class="contact" id="contact">
+    <h2 class="heading">Create New <span>User Profile</span></h2>
+
+    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+        <div class="input-box">
+            <input type="text" formControlName="name" placeholder="Full Name">
+            <input type="email" formControlName="email" placeholder="Email Address">
+        </div>
+
+        <div class="input-box">
+            <input type="number" formControlName="age" placeholder="Age">
+            <input type="text" formControlName="gender" placeholder="Gender">
+        </div>
+
+        <div class="input-box">
+            <input type="number" formControlName="weight" placeholder="Weight">
+            <input type="number" formControlName="height" placeholder="Height">
+            <input type="text" formControlName="goal" placeholder="Goal">
+        </div>
+
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</section>

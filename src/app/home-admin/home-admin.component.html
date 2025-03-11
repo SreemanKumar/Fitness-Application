@@ -1,0 +1,142 @@
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<header class="header">
+    <a href="#" class="logo">Fitness Monitoring System - <span>Admin Dashboard</span></a>
+
+    <i class='bx bx-menu' id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#certification">External Links</a>
+        <a class="logout-button" (click)="logout()">Logout</a>
+    </nav>
+</header>
+
+
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Welcome to FitTrack</h3>
+        <h1><span>Your Journey to Wellness</span></h1>
+        <h3>Set Goals, Track Progress, Stay Fit</h3>
+        <p> Trying to stay on top of your fitness? We make it easy. Track your workouts, steps, and even your sleep
+            without any hassle. Get personalized plans, real-time updates, and a clean dashboard to see your progress.
+            Everything syncs across your devices, so you can focus on what matters—crushing your fitness goals!
+        </p>
+        <div class="social-media">
+            <a href="#"><i class='bx bxl-linkedin'
+                    onclick="location.href='http://www.linkedin.com/in/sreemankumar'"></i></a>
+            <a href="#"><i class='bx bxl-whatsapp' onclick="location.href='http://wa.me/917200683090'"></i></a>
+            <a href="#"><i class='bx bx-envelope' onclick="location.href='http://srimankumar827@gmail.com'"></i></a>
+            <a href="#"><i class='bx bx-phone' onclick="location.href='http://surl.li/oiwmc'"></i></a>
+        </div>
+        <a routerLink="/register" href="#" class="btn">Begin Today</a>
+        <!-- <a routerLink="/login" href="#">Sign in</a> -->
+    </div>
+    <div class="home-img">
+        <img src="../assets/Picture2.png" alt="">
+    </div>
+</section>
+
+
+<section class="services" id="certification">
+    <h2 class="heading">External <span>Links</span></h2>
+
+    <div class="services-container">
+
+        <div class="services-box">
+            <i class='bx bx-user'></i>
+            <h3>User Profile</h3>
+            <p>The user profile provides a personalized space to manage details, preferences,
+                and activity, ensuring seamless interaction and an enhanced experience.
+            </p>
+
+            <a href="#" class="btn" routerLink="/crud">Read More</a>
+
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-plus-medical'></i>
+            <h3>Health Metrics</h3>
+            <p>The user profile displays personalized health metrics, including fitness goals,
+                activity progress, and wellness insights for a healthier lifestyle.
+            </p>
+
+            <a href="#" class="btn" routerLink="/healthmetrics-getall">Read More</a>
+
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-cart-download'></i>
+            <h3>Subscription Plan</h3>
+            <p>Provides details about the subscription plan, including features, pricing, and benefits,
+                ensuring access to exclusive content and services.
+            </p>
+            <a href="#" class="btn" routerLink="/curd-subscription">Read
+                More</a>
+
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-universal-access'></i>
+            <h3>Activities for User</h3>
+            <p>Tracks and displays user activities, offering insights into progress,
+                goals, and achievements to encourage a more active lifestyle.
+            </p>
+            <a href="#" class="btn" routerLink="/crud-activitiesforuser">Read
+                More</a>
+
+        </div>
+
+
+        <div class="services-box">
+            <i class='bx bxs-bowl-hot'></i>
+            <h3>Diet Plan</h3>
+            <p>Offers a personalized diet plan tailored to nutritional needs,
+                helping users achieve health goals with balanced meals and guidance.
+            </p>
+            <a href="#" class="btn" routerLink="/crud-dietplan">Read
+                More</a>
+
+        </div>
+
+
+        <div class="services-box">
+            <i class='bx bx-notepad'></i>
+            <h3>Workout Logs</h3>
+            <p>Records and tracks workout routines, progress, and performance,
+                providing insights to help users improve their fitness and reach goals.
+            </p>
+            <a href="#" class="btn" routerLink="/workoutlog-getall">Read
+                More</a>
+
+        </div>
+
+
+
+        <div class="services-box">
+            <i class='bx bx-medal'></i>
+            <h3>Achievements</h3>
+            <p>Displays user achievements, highlighting milestones, progress,
+                and goals reached, motivating continued growth and success in fitness and wellness.
+            </p>
+            <a href="#" class="btn" routerLink="/crud-achievements">Read
+                More</a>
+
+        </div>
+
+
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>Copyright © 2025 by Stay Fit Smart Monitoring System | All Rights Reverved</p>
+    </div>
+
+    <!-- <div class="footer-iconTop">
+        <a href="#home" ><i class='bx bx-up-arrow-alt'></i></a>
+    </div> -->
+</footer>
+<router-outlet>

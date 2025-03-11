@@ -1,0 +1,42 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+    <main class="table" id="users_table">
+        <section class="table" id="users_table">
+            <section class="table__header">
+                <h1>Get Activity <span>By ID</span></h1>
+                <div class="input-group">
+                    <input type="number" [(ngModel)]="activityId" placeholder="Enter Activity ID">
+                    <button (click)="getActivityById()" class="btn">Search</button>
+                </div>
+            </section>
+
+            <section class="table__body">
+                <div *ngIf="activity">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Activity Type <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>Date <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>Duration <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>Calories Burned <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>User ID <span class="icon-arrow">&UpArrow;</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ activity.activityType }}</td>
+                                <td>{{ activity.date }}</td>
+                                <td>{{ activity.durationInMinutes }}</td>
+                                <td>{{ activity.caloriesBurned }}</td>
+                                <td>{{ activity.userId }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p> -->
+        </section>
+    </main>
+</body>

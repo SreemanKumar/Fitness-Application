@@ -1,0 +1,26 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Create <span>Activity</span></h2>
+
+    <form (ngSubmit)="createActivity()">
+        <div class="input-box">
+            <input type="text" [(ngModel)]="activity.activityType" name="activityType" placeholder="Activity Type"
+                required>
+            <input type="date" [(ngModel)]="activity.date" name="date" placeholder="Date" required>
+        </div>
+
+        <div class="input-box">
+            <input type="number" [(ngModel)]="activity.durationInMinutes" name="durationInMinutes"
+                placeholder="Duration in Minutes" required>
+            <input type="number" [(ngModel)]="activity.caloriesBurned" name="caloriesBurned"
+                placeholder="Calories Burned" required>
+        </div>
+
+        <div class="input-box">
+            <input type="number" [(ngModel)]="activity.userId" name="userId" placeholder="User ID" required>
+        </div>
+
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</section>

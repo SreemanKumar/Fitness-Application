@@ -1,0 +1,15 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+<section class="contact" id="contact">
+
+    <h2 class="heading">Delete Achievement by ID</h2>
+    <form>
+        <div class="input-box">
+            <input type="number" [(ngModel)]="achievementId" placeholder="Enter Achievement ID" />
+
+        </div>
+        <!-- <input type="submit" value="Delete Achievements" class="btn"> -->
+        <button type="submit" class="btn" (click)="deleteAchievement()">Delete Achievement</button>
+    </form>
+    <p>{{ message }}</p>
+
+</section>

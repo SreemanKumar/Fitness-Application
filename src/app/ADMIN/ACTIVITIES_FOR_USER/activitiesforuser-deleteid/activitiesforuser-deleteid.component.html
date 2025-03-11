@@ -1,0 +1,17 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Delete Activity <span>By ID</span></h2>
+
+    <form (ngSubmit)="deleteActivityById()">
+        <div class="input-box">
+            <input type="number" [(ngModel)]="activityId" name="activityId" placeholder="Enter Activity ID" required>
+        </div>
+
+        <input type="submit" value="Delete Activity" class="btn">
+    </form>
+
+    <div *ngIf="message">
+        <p>{{ message }}</p>
+    </div>
+</section>

@@ -1,0 +1,28 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+
+<section class="contact" id="contact">
+    <h2 class="heading">Workout <span>Logs</span></h2>
+
+    <form (ngSubmit)="submitWorkoutLog()">
+        <div class="input-box">
+            <input type="date" [(ngModel)]="workoutLog.date" name="date" required>
+            <input type="text" [(ngModel)]="workoutLog.workoutType" name="workoutType" placeholder="Workout Type"
+                required>
+        </div>
+
+        <div class="input-box">
+            <input type="number" [(ngModel)]="workoutLog.duration" name="duration" placeholder="Duration in Minutes"
+                required>
+            <input type="number" [(ngModel)]="workoutLog.caloriesBurned" name="caloriesBurned"
+                placeholder="Calories Burned" required>
+        </div>
+
+        <div class="input-box">
+            <input type="number" [(ngModel)]="workoutLog.userId" name="userId" placeholder="User ID" required>
+        </div>
+
+        <textarea [(ngModel)]="workoutLog.notes" name="notes" cols="30" rows="4" placeholder="Your Notes"></textarea>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</section>

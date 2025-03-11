@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+    <div class="login">
+        <h2>Login</h2>
+        <div class="inputBx">
+            <input type="text" placeholder="Username" [(ngModel)]="username">
+        </div>
+        <div class="inputBx">
+            <input type="password" placeholder="Password" [(ngModel)]="password">
+        </div>
+        <div class="inputBx">
+            <input type="submit" value="Sign in" (click)="login(username, password)">
+        </div>
+        <div class="links">
+            <a>New User? </a>
+            <a routerLink="/register" href="#">Signup</a>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

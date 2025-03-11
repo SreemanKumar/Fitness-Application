@@ -1,0 +1,22 @@
+<!-- src/app/components/dietplan/dietplan.component.html -->
+<app-navbar-withlogout></app-navbar-withlogout>
+<section class="contact" id="contact">
+    <h2 class="heading">
+        Diet <span>Plan</span>
+    </h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="input-box">
+            <input type="date" [(ngModel)]="dietPlan.startDate" name="startDate" placeholder="Start Date" required />
+            <input type="date" [(ngModel)]="dietPlan.endDate" name="endDate" placeholder="End Date" required />
+        </div>
+
+        <div class="input-box">
+            <input type="text" [(ngModel)]="dietPlan.mealPlan" name="mealPlan" placeholder="Meal Plan" required />
+            <input type="number" [(ngModel)]="dietPlan.userId" name="userId" placeholder="User ID" required />
+        </div>
+
+        <textarea [(ngModel)]="dietPlan.notes" name="notes" cols="30" rows="4" placeholder="Your Notes"></textarea>
+        <input type="submit" value="Submit" class="btn" />
+    </form>
+</section>

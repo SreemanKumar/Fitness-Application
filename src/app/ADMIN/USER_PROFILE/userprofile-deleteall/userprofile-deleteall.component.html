@@ -1,0 +1,9 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+<section class="delete-section">
+    <h2 class="heading">Delete <span>All Users</span></h2>
+
+    <button (click)="deleteAllUsers()" class="btn delete-btn">Delete All Users</button>
+
+    <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</section>

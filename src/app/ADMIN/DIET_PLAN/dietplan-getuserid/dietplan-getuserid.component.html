@@ -1,0 +1,41 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+    <main class="table" id="diet_table">
+        <section class="table" id="diet_table">
+            <section class="table__header">
+                <h2>Diet Plan by User ID</h2>
+
+                <div class="input-group">
+                    <input type="number" [(ngModel)]="userId" placeholder="Enter User ID" />
+                    <button (click)="fetchDietPlans()">Fetch Diet Plans</button>
+                </div>
+            </section>
+
+            <section class="table__body">
+                <table *ngIf="dietPlans.length > 0">
+                    <thead>
+                        <tr>
+                            <th>Start Date</th>
+                            <th>endDate</th>
+                            <th>mealPlan</th>
+                            <th>notes</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let dietPlan of dietPlans">
+                            <td>{{ dietPlan.startDate }}</td>
+                            <td>{{ dietPlan.endDate }}</td>
+                            <td>{{ dietPlan.mealPlan }}</td>
+                            <td>{{ dietPlan.notes }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <p *ngIf="dietPlans.length === 0">No diet plans found for this user.</p>
+
+        </section>
+    </main>
+</body>

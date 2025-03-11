@@ -1,0 +1,21 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Create Subscription <span>Plan</span></h2>
+
+    <form (ngSubmit)="createSubscription()">
+        <div class="input-box">
+            <input type="text" [(ngModel)]="subscription.subscriptionType" name="subscriptionType"
+                placeholder="Subscription Type" required>
+            <input type="date" [(ngModel)]="subscription.startDate" name="startDate" required>
+        </div>
+
+        <div class="input-box">
+            <input type="date" [(ngModel)]="subscription.endDate" name="endDate" required>
+            <input type="number" [(ngModel)]="subscription.price" name="price" placeholder="Price" required>
+            <input type="number" [(ngModel)]="subscription.userId" name="userId" placeholder="User ID" required>
+        </div>
+
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</section>

@@ -1,0 +1,41 @@
+<!-- src/app/workoutlog-getall/workoutlog-getall.component.html -->
+<app-navbar-withlogout></app-navbar-withlogout>
+
+<body>
+    <main class="table" id="users_table">
+        <section class="table__header">
+            <h1 class="heading">Workout Logs of All Users</h1>
+            <!-- <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p> -->
+            <!-- <div class="input-group"></div> -->
+        </section>
+
+
+
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Log ID</th>
+                        <th>Date</th>
+                        <th>Workout Type</th>
+                        <th>Duration (minutes)</th>
+                        <th>Calories Burned</th>
+                        <th>Notes</th>
+                        <th>User ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let log of workoutLogs">
+                        <td>{{ log.logId }}</td>
+                        <td>{{ log.date }}</td>
+                        <td>{{ log.workoutType }}</td>
+                        <td>{{ log.duration }}</td>
+                        <td>{{ log.caloriesBurned }}</td>
+                        <td>{{ log.notes }}</td>
+                        <td>{{ log.userId }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>

@@ -1,0 +1,13 @@
+<app-navbar-withlogout></app-navbar-withlogout>
+<section class="contact" id="contact">
+    <h2 class="heading">Delete Subscription <span>By ID</span></h2>
+
+    <form (submit)="deleteSubscription()">
+        <div class="input-box">
+            <input type="number" [(ngModel)]="subscriptionId" placeholder="Subscription ID" name="subscriptionId"
+                required>
+        </div>
+
+        <button type="submit" class="btn">Delete</button>
+    </form>
+</section>
