@@ -58,7 +58,7 @@ import { AppComponent } from './app.component';
 //import { AuthService } from './Authservice/AuthService';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'appcomponent', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'home', component: HomeComponent },
